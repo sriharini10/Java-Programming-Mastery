@@ -1,0 +1,19 @@
+class Literalseg
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter Your Name:");
+		System.out.println("Aaa");
+		System.out.println("Enter Your Age:");
+		System.out.println(20);
+		System.out.println("Enter Your Height:");
+		System.out.println(5.5);
+		System.out.println("Enter Your Gender:");
+		System.out.println('M');
+		System.out.println("You Are Married:");
+		System.out.println(true);
+		System.out.println("you have child:");
+		System.out.println(false);
+		
+	}
+}
