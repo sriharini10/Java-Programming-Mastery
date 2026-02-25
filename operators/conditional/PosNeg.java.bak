@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class PosNeg 
+{
+	static Scanner sc =new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.println("Enetr one num:");
+		int n= Sc.nextInt();
+		
+		String ans = (n>=0) ? "positive" : "Negative";
+		
+		System.out.println(ans);
+	}
+}

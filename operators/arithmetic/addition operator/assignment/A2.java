@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class A2 
+{
+	static Scanner sc= new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a number1:");
+		int n1=sc.nextInt();
+		
+		System.out.print("Enter a number2:");
+		int n2=sc.nextInt();
+		
+		int add=n1+n2;
+		System.out.println("addition result:" + add);
+		
+		int sub=n1-n2;
+		System.out.println("subraction result:" + sub);
+		
+		int mul=n1*n2;
+		System.out.println("multiplication result:" + mul);
+		
+		int div=n1/n2;
+		System.out.println("division result:" + div);
+		
+		int mod=n1%n2;
+		System.out.println("modulus result:" + mod);
+		
+		
+		
+	}
+}

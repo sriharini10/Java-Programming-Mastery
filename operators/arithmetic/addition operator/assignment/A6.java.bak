@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class A6; 
+{
+	static Scanner sc= new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		
+		System.out.print("enter salary:");
+		int salary=sc.nextInt();
+		
+		System.out.print("enter HRA:");
+		int hra=sc.nextInt();
+		
+		System.out.print("enter DA:");
+		int da=sc.nextInt();
+		
+		int grossSalary=salary + hra +da;
+		System.out.println("gross salary is: " +grossSalary);
+		
+		
+		
+		
+	}
+}
