@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Vowels_Consonants
+{
+	static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter a character:");
+		char ch = sc.next().charAt(0);
+		
+		switch (ch)
+		{
+		case 'a','e','i','o','u':
+			System.out.println("Vowels in Lowercase");
+			break;
+		case 'A','E','I','O','U':
+			System.out.println("Vowels in Uppercase");
+			break;
+		default:
+			System.out.println("Consonants");
+			
+		
+		}
+	}
+}

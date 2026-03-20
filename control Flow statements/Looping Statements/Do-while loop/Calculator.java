@@ -1,0 +1,76 @@
+import java.util.Scanner;
+class Calculator
+{
+	static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		
+		int num1;
+		int num2;
+		int option;
+		
+		do{
+			System.out.println("\t \t \t calculator");
+			System.out.println("1.Addition \n2.Subraction \n3.Multiplication \n4.Division   \n0.Exit");
+			System.out.print("Select one option:");
+			option=sc.nextInt();
+			
+		
+		
+		
+		
+		switch(option){
+			
+			case 1:
+				System.out.println("\t \t \t Welcome to Addition");
+				System.out.println("enter first number:");
+				num1=sc.nextInt();
+				System.out.println("enter second number:");
+				num2=sc.nextInt();
+				System.out.println("Addition result is:" +(num1 + num2));
+				break;
+				
+			case 2:
+				System.out.println("\t \t \t Welcome to Subraction");
+				System.out.println("enter first number:");
+				num1=sc.nextInt();
+				System.out.println("enter second number:");
+				num2=sc.nextInt();
+				System.out.println("Subraction result is:" +(num1 - num2));
+				break;
+				
+			case 3:
+				System.out.println("\t \t \t Welcome to Multiplication");
+				System.out.println("enter first number:");
+				num1=sc.nextInt();
+				System.out.println("enter second number:");
+				num2=sc.nextInt();
+				System.out.println("Multiplication result is:" +(num1 * num2));
+				break;
+				
+			case 4:
+				System.out.println("\t \t \t Welcome to Division");
+				System.out.println("enter first number:");
+				num1=sc.nextInt();
+				System.out.println("enter second number:");
+				num2=sc.nextInt();
+				System.out.println("Division result is:" +(num1 / num2));
+				break;
+				
+				
+			case 0:
+				System.out.println("bye byeeeeee");
+				break;
+			
+			default:
+				System.out.println("Invalid option....please select correct option");
+			
+		 }
+		
+		
+		
+		} while( option != 0);
+		
+				
+	}
+}

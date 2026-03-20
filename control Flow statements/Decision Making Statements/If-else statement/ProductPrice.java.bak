@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class ProductPrice  
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter price of product:");
+		int price =sc.nextInt();
+		
+		if(price>800){
+			System.out.println("You will get 30% Discount");
+			price = price* 70/100;
+			
+			System.out.println("You have to pay: " +price);
+			
+		}
+		else {
+			System.out.println("You will not get Discount");
+			System.out.println("You have to pay: " +price);
+		}
+		
+	}
+}
