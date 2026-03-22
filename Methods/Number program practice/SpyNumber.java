@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class SpyNumber 
+{
+	static Scanner sc=new Scanner(System.in);
+	
+	public static boolean isSpy(int n){
+		int sum = 0 ,mul =1;
+		while(n>0){
+			int ld = n%10;
+			sum =sum+ld;
+			mul=mul * ld;
+			n=n/10;
+		}
+		return sum==mul;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter one Number: ");
+		int n=sc.nextInt();
+		
+		boolean ans = isSpy(n);
+		
+		if(ans){
+			System.out.println("SpyNumber");
+			
+		}
+		else {
+			System.out.println("Not Spynumber ");
+		}
+		
+	}
+}

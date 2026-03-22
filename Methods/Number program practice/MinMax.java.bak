@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class MinMax 
+{
+	static Scanner sc= new Scanner(System.in);
+	public static int findMin(int n){
+		
+		int min=Integer.MAX_VALUE;
+		
+		while(n>0){
+			int ld=n%10;
+			if(ld>min){
+				min =ld;
+			}
+			n=n/10;
+		}
+		return min;
+	}
+	public static int findMax(int n){
+		
+		int max=Integer.MIN_VALUE;
+		
+		while(n>0){
+			int ld=n%10;
+			if(ld<max){
+				max =ld;
+			}
+			n=n/10;
+		}
+		return max;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter one number: ");
+		int n=sc.nextInt();
+		
+		int minimum=findMin(n);
+		int maximum=findMax(n);
+		
+		System.out.println("Minimum value: "+minimum);
+		System.out.println("Maximum value: "+maximum);
+		
+	
+	}
+}
