@@ -1,0 +1,25 @@
+class Factorial
+{
+	public static int factorial(int n,int i, int fact){
+		
+		//base case
+		
+		if (i>n)
+		{
+			return fact;
+		}
+		
+		
+		
+		fact = fact * i;
+		return factorial(n,i+1,fact);
+		
+		
+	}
+	public static void main(String[] args) 
+	{
+		int ans = factorial(5,1,1);
+		System.out.println(ans);
+		
+	}
+}

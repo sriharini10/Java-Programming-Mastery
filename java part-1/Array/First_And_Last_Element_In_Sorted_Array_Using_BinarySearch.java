@@ -1,0 +1,71 @@
+import java.util.Arrays;
+class  First_And_Last_Element_In_Sorted_Array_Using_BinarySearch
+{
+	public static int[] firstlast(int a[],int key){
+		
+		int ans[] = {-1,-1} ;
+		
+		int i=0;
+		int j= a.length-1;
+		
+		//left occurances
+		while (i<=j)
+		{
+			int mid = i+(j-i)/2;
+			
+			if (a[mid] == key)
+			{
+				ans[0]=mid;
+				j= mid-1;
+			}
+			else if (key > a[mid])
+			{
+				i=mid + 1;
+			}
+			else {
+				j= mid -1;
+			}
+				
+		}
+			
+		
+		//right occourance
+		i=0;
+		j= a.length-1;
+		
+		
+		while (i<=j)
+		{
+			int mid = i+(j-i)/2;
+			
+			if (a[mid] == key)
+			{
+				ans[1]=mid;
+				i = mid + 1;
+			}
+			else if (key > a[mid])
+			{
+				i=mid + 1;
+			}
+			else {
+				j= mid -1;
+			}
+				
+		}
+		
+		
+		return  ans;
+		
+		
+		
+		
+	}
+	public static void main(String[] args) 
+	{
+		int a[] ={5,7,7,8,8,10};
+		
+		int key =8;
+		
+		System.out.println(Arrays.toString(firstlast(a,key)));
+	}
+}

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class StrongNumber 
+{
+	static Scanner sc=new Scanner(System.in);
+	public static int factorial(int n){
+		int fact =1;
+		
+		for (int i=1;i<=n ;i++ )
+		{
+			fact = fact *i;
+		}
+		return fact;
+	}
+	public static boolean isStrong(int n){
+		
+		int temp =n;
+		int sum =0;
+		
+		int ld =n%10;
+		sum = sum + factorial(ld);
+		n=n/10;
+		
+		return temp == sum;
+		
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("enter one number:");
+		int n= sc.nextInt();
+		
+		if(isStrong(n)){
+			System.out.println("Strong Number");
+		}
+		else{
+			System.out.println("Not a strong Number");
+		}
+	}
+}

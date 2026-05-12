@@ -1,0 +1,23 @@
+class Power_Recursion 
+{
+	public static void  power(int pow,int base,int mul,int i){
+		
+		if(i>pow)
+		{
+			System.out.println(mul);
+			return;
+		}
+		
+		mul = mul *base;
+		
+		power(5,2,mul,i+1);
+		
+		
+	}
+	public static void main(String[] args) 
+	{
+		int pow = 5;
+		int base = 2;
+		power(pow,base,1,1);
+	}
+}

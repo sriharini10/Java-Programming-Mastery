@@ -1,0 +1,10 @@
+class FinalExample 
+{
+	 final static long aadharNo = 123456789012L;
+	public static void main(String[] args) 
+	{
+		
+		
+		System.out.println(aadharNo);
+	}
+}

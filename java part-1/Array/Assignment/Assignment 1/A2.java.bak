@@ -1,0 +1,21 @@
+class A2 
+{
+	public static void main(String[] args) 
+	{
+		String colours[] = new String[6];
+		
+		colours[0] ="Black";
+		colours[0] ="White";
+		colours[0] ="Blue";
+		colours[0] ="Pink";
+		colours[0] ="Red";
+		colours[0] ="Yellow";
+		
+		//traverse the array
+		for(int i=0; i<colours.length; i++){
+			
+			System.out.println(colours[i]);
+			
+		}
+	}
+}

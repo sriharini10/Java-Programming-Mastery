@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class LCM1
+{
+	static Scanner sc=new Scanner(System.in);
+	
+	public static int findLCM(int a,int b){
+		
+		int n=Math.max(a,b);
+		int i=1;
+		
+		while(true){
+			int current=n *i;
+			if(current % a==0 && current %b==0){
+				return current;
+			}
+			i++;
+		}
+		
+		
+	}
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a: ");
+		int a=sc.nextInt();
+		
+		System.out.print("Enter b: ");
+		int b=sc.nextInt();
+		
+		int ans = findLCM(a,b);
+		
+	
+		System.out.println(ans);
+
+		
+	}
+}

@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Neon_Number 
+/* the sum of the digits of integer's square is equal to the original number
+
+		eg : 9
+			9*9 = 81 
+			8 + 1 = 9    */
+
+{
+	static Scanner sc = new Scanner(System.in);
+	public static boolean isNeon(int n){
+		
+		int sum =0;
+		int sq =n *n;
+		int temp =n;
+		
+		while(sq>0){
+			int ld = sq %10;
+			
+			sum = sum  + ld;
+			
+			sq= sq/10;
+			
+		}
+		return temp==sum;
+		
+	}
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter one Number: ");
+		int n =sc.nextInt();
+		
+		boolean ans =isNeon(n);
+		
+		if(ans){
+			System.out.println("It is Neon Number");
+		}
+		else{
+			System.out.println("It is not a Neon Number");
+		}
+	}
+}

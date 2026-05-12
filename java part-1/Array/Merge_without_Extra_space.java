@@ -1,0 +1,29 @@
+import java.util.Arrays;
+class Merge_without_Extra_space 
+{
+	public static void main(String[] args) 
+	{
+		int a[]= {2,4,7,10};
+		int b[] = {2,3};
+		
+		int n= a.length;
+		
+		
+		
+		for (int i=b.length-1;i>=0 ;i-- )
+		{
+			if (b[i]<=a[n-1])
+			{
+				int temp = a[n-1];
+				a[n-1] = b[i];
+				b[i] = temp;
+				Arrays.sort(a);
+				Arrays.sort(b);
+			}
+		}
+		
+		
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(b));
+	}
+}

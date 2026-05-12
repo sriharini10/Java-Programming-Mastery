@@ -1,0 +1,104 @@
+class Employee 
+{
+	private String ename;
+	private int eid;
+	private double sal;
+	private boolean isActive;
+	
+	Employee(String ename , int eid , double sal, boolean isActive)
+	{
+		this.ename = ename;
+		this.eid = eid;
+		this.sal = sal;
+		this.isActive = isActive;
+	}
+	
+	//getter method for ename
+	
+	public String getEname()
+	{
+		return ename;
+	}
+	
+	//setter method for ename
+	
+	public void setEname(String ename)
+	{
+		this.ename = ename;
+	}
+	
+	//getter method for eid
+	
+	public int getEid()
+	{
+		return eid;
+	}
+	
+	//setter method for eid
+	
+	public void setEid(int eid)
+	{
+		this.eid = eid;
+	}
+	
+	//getter method for sal
+	
+	public double getSal()
+	{
+		return sal;
+	}
+	
+	//setter method for sal
+	
+	public void setSal(double sal)
+	{
+		this.sal = sal;
+	}
+	
+	//getter method for isActive
+	
+	public boolean getIsActive()
+	{
+		return isActive;
+	}
+	
+	//setter method for isActive
+	
+	public void setIsActive(boolean isActive)
+	{
+		this.isActive = isActive;
+	}
+	
+	
+}
+
+class Manager
+{
+	public static void main(String[] args)
+	{
+		Employee e1 = new Employee("smith",01,20000,true);
+	
+		System.out.println( e1.getEname() );
+		System.out.println( e1.getEid() );
+		System.out.println( e1.getSal() );
+		System.out.println( e1.getIsActive() );
+		
+		System.out.println("--------------------------------------");
+		
+		e1.setEname("scott");
+		e1.setEid(04);
+		e1.setSal(30000);
+		e1.setIsActive(false);
+		
+		System.out.println( e1.getEname() );
+		System.out.println( e1.getEid() );
+		System.out.println( e1.getSal() );
+		System.out.println( e1.getIsActive() );
+		
+		
+			
+		
+	}
+		
+}
+	

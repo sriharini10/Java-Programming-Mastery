@@ -1,0 +1,29 @@
+class Remove_Duplicates_from_Sorted_Array_In_Place
+{
+	public static int removeDuplicates(int a[]){
+		
+		int i=0,j=0;
+		
+		while (j<a.length)
+		{
+			if(a[j]==a[i])
+			{
+				j++;
+			}
+			else{
+				i++;
+				a[i]=a[j];
+				j++;
+			}
+		}
+		System.out.println(Arrays.toString(a));
+		return i+1;
+		
+	}
+	public static void main(String[] args) 
+	{
+		int a[]={0,0,1,1,1,2,2,3,3,4};
+		
+		System.out.println("size of the array is: "+removeDuplicates(a));
+	}
+}

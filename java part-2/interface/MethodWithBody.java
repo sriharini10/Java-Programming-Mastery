@@ -1,0 +1,34 @@
+interface A
+{
+	void m1();
+	
+	static void m2()
+	{
+		System.out.println("I am static method");  //in interface static method only present with body but this method cannot be inherited
+	}
+
+}
+
+class B implements A
+{
+	@Override
+		public void m1()
+	{
+		System.out.println("I am m1");
+	}
+}
+
+
+
+
+class MethodWithBody 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+		A.m2();
+		
+		B ob = new B();
+		ob.m1();
+	}
+}

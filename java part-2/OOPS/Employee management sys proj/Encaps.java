@@ -1,0 +1,38 @@
+class Parent
+{
+	int x=10;
+	public  void run()
+	{
+		x=50;
+		System.out.println(x);
+	}
+}
+class Child extends Parent
+{
+	int x=20;
+	
+	
+}
+class Encaps
+{
+	
+	
+	
+	public static void main(String args[])
+	{
+		Parent p1 = new Parent();
+		System.out.println(p1.x);
+		Parent p = new Child();
+		System.out.println(p.x);
+		Child c = new Child();
+		System.out.println(c.x);
+		c.run();
+		p.run();
+		
+		
+		
+		
+		
+		
+	}	
+}

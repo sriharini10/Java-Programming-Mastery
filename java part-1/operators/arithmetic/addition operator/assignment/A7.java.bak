@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class A7
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		
+		System.out.println("enter subject1 mark out of 100:");
+		int s1=sc.nextInt();
+		System.out.println("enter subject2 mark out of 100:");
+		int s2=sc.nextInt();
+		System.out.println("enter subject3 mark out of 100:");
+		int s3=sc.nextInt();
+		
+		int total=s1+s2+s3;
+		System.out.println("Total marks is: " +total);
+		
+		int percentage=(total/300)*100;
+		System.out.println("percentage mark is: " +percentage);
+	}
+}

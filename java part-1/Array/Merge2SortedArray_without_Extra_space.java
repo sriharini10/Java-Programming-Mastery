@@ -1,0 +1,37 @@
+import java.util.Arrays;
+class Merge2SortedArray_without_Extra_space 
+{
+	public static void main(String[] args) 
+	{
+		int a[] ={1,5,9,10,15,20};
+		int b[] ={2,3,8,13};
+		
+		int n = a.length;
+		int m = b.length;
+		
+		int i=0;
+		int j=0;
+		int k=n-1;
+		while (i< n && j<m)  // for optimization while(i<=k && j<m) --> because elements after k will come from the b array so no need to check 
+		{
+			if(a[i]<b[j])
+			{
+				i++;
+			}
+			else
+			{
+				int temp = a[k];
+				a[k] = b[j];
+				b[j] = temp;
+				
+				k--;
+				j++;
+			}
+		}
+		Arrays.sort(a);
+		Arrays.sort(b);
+		
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(b));
+	}
+}

@@ -1,0 +1,34 @@
+class Parent
+{
+	static void run()
+	{
+		System.out.println("Parent is sleeping");
+	}
+}
+
+class Child extends Parent
+{
+	static void run()
+	{
+		System.out.println("child is sleeping");
+	}
+}
+
+class MethodShadowing  
+{
+	public static void main(String[] args) 
+	{
+		Parent p1 = new Parent();
+		p1.run();
+		
+		Child c1 = new Child();
+		c1.run();
+		
+		Parent p2 = new Child();
+		p1.run();
+		
+		Child c2 = (Child) new Parent();
+		c2.run();
+		
+	}
+}

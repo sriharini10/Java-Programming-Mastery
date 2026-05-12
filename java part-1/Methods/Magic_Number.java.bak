@@ -1,0 +1,52 @@
+import java.util.Scanner;
+class Magic_Number 
+/* add the number again and again  util get the single digit
+
+if the single digit is 1 it is magic number otherwise not magic number
+
+            eg: n= 289 
+			       19 -->  2+ 8 +9
+				   10 -->  1+0
+				   1 
+				   */
+
+{
+	static Scanner sc = new Scanner(System.in);
+	public static boolean isMagic(int n){
+		
+		while(n>=9){
+			
+			int sum =0;
+			
+			while(n>0){
+				
+				int ld= n % 10;
+				
+				sum = sum +ld;
+				
+				n = n /10;
+				
+			}
+			n= sum;    // important
+		}
+		if(n==1)
+			return true;
+	return false;
+		
+	}
+	
+	public static void main(String[] args) 
+	{		
+		System.out.print("Enter one Number: ");
+		int n =sc.nextInt();
+		
+		boolean ans = isMagic(n);
+		
+		if(ans){
+			System.out.println("It is magic Number");
+		}
+		else{
+			System.out.println("It is not a magic Number");
+		}
+	}
+}

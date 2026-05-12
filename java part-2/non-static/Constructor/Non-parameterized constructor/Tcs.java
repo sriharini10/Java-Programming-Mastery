@@ -1,0 +1,45 @@
+class Emp 
+{
+	String ename;
+	int eid;
+	double sal;
+	
+	void work()
+	{
+		System.out.println("Developing software...");
+	}
+	Emp()
+	{
+		System.out.println("New Employee Added");
+	}
+	
+	void empDetails()
+	{
+		System.out.println("Employee Name is: "+ename);
+		System.out.println("Employee id is: "+eid);
+		System.out.println("Employee salary is: "+sal);
+	}
+}
+
+class Tcs
+{
+	public static void main(String[] args) 
+	{
+		Emp e1 = new Emp();
+		
+		
+		e1.ename ="Miller";
+		e1.sal = 10000;
+		e1.eid = 101;
+		e1.empDetails();
+		
+		System.out.println("------------------------------------------");
+		
+		Emp e2 = new Emp();
+		
+		e2.ename = "scott";
+		e2.eid = 102;
+		e2.sal = 8000;
+		e2.empDetails();
+	}
+}

@@ -1,0 +1,48 @@
+import java.util.Arrays;
+class  First_And_Last_Element_In_Sorted_Array
+{
+	public static int[] firstlast(int a[],int key){
+		
+		int ans[] = {-1,-1} ;
+		
+		int i=0;
+		int j= a.length-1;
+		
+		
+		//left occurances
+		while (i<a.length)
+		{
+			if (a[i]==key)
+			{
+				ans[0]=i;
+				break;
+			}
+			i++;
+		}
+		
+		//right occurances
+		while (j>=0)
+		{
+			if (a[j] ==key)
+			{
+				ans[1]=j;
+				break;
+			}
+			j--;
+		}
+		
+		return  ans;
+		
+		
+		
+		
+	}
+	public static void main(String[] args) 
+	{
+		int a[] ={5,7,7,8,8,10};
+		
+		int key =8;
+		
+		System.out.println(Arrays.toString(firstlast(a,key)));
+	}
+}

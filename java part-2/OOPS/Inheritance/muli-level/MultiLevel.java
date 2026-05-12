@@ -1,0 +1,49 @@
+class Animal
+{
+	void eat()
+	{
+		System.out.println("cat eat");
+	}
+}
+
+
+class Dog extends Animal
+{
+	void bark()
+	{
+		System.out.println("Barking");
+	}
+}
+
+class Cat extends Dog
+{
+	void play()
+	{
+		System.out.println("Playing");
+	}
+}
+class MultiLevel 
+{
+	public static void main(String[] args) 
+	{
+		Dog d1 = new Dog();
+		d1.bark();
+		d1.eat();
+		//d1.play();  //Not possible
+		
+		System.out.println("----------------------------------------");
+		
+		Cat c1 = new Cat();
+		c1.play();
+		c1.bark();
+		c1.eat();
+		
+		System.out.println("----------------------------------------");
+		
+		Animal a1 = new Animal();
+		a1.eat();
+		
+		
+		
+	}
+}

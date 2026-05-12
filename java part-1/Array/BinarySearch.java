@@ -1,0 +1,33 @@
+class BinarySearch 
+{
+	public static int binarysearch(int a[],int key){
+		
+		int i=0;
+		int j=a.length-1;
+		
+		while(i<=j){
+			
+			int mid = (i+j)/2;   // mid= i+(j-i)/2
+			
+			if(a[mid] == key){
+				return mid;
+			}
+			else if(key > a[mid]){
+				 
+				 i=mid+1;
+			}
+			else{
+				j=mid-1;
+			}
+		}
+		return -1;
+	}
+	public static void main(String[] args) 
+	{
+		int a[]={12,17,19,420,999,1002,1024};
+		
+		int key=1024;
+		
+		System.out.println("The key is present in the index: "+binarysearch(a,key));
+	}
+}

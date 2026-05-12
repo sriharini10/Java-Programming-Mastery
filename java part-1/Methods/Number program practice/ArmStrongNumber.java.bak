@@ -1,0 +1,54 @@
+import java.util.Scanner;
+class ArmStrongNumber 
+{
+	static Scanner sc=new Scanner(System.in);
+	public static int count(int n){
+		
+		int count =0;
+		
+		while(n>0){
+			
+			n=n/10;
+			count++;
+			
+		}
+		return count;
+	}
+	public static int power (int n,int count){
+		
+		int mul=1;
+		for(int i=0;i<count;i++){
+			
+			mul=mul*n;
+		}
+		return mul;
+	}
+	
+	public static boolean isArmstrong(int n){
+		
+		int sum=0;
+		int temp = n;
+		int digit=count(n);
+		
+		while(n>0){
+			int ld=n%10;
+			sum = sum + power(ld,digit);
+			n=n/10;
+				
+		}
+		return temp ==sum;
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter one Number: ");
+		int n=sc.nextInt();
+		
+		if(isArmstrong(n)){
+			System.out.println("It is Armstrong Number");
+		}
+		else{
+			System.out.println("It is not a armstrong number");
+		}
+	}
+}

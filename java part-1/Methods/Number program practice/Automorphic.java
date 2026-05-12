@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class Automorphic 
+{
+	static Scanner sc=new Scanner(System.in);
+	public static boolean isAutomorphic(int n){
+		
+		int sq = n*n;
+		
+		while(n>0){
+			
+			int ld1 =n%10;
+			int ld2 =sq%10;
+			
+			if(ld1 == ld2){
+				return true;
+			}
+			n = n/10;
+			sq = sq/10;
+			
+		}
+		return false;
+		
+		
+	}
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter one Number: ");
+		int n = sc.nextInt();
+		
+		
+		boolean ans = isAutomorphic(n);
+		
+		if(ans){
+			System.out.println("Automorphic");
+		}
+		else{
+			System.out.println("Not Automorphic");
+		}
+	}
+}

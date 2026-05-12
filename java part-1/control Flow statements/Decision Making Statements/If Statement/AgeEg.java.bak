@@ -1,0 +1,11 @@
+class AgeEg 
+{
+	public static void main(String[] args) 
+	{
+		int age= 34;
+		if (age>19)
+		{
+			System.out.println("You are an adult");
+		}
+	}
+}
